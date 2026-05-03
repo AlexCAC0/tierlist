@@ -1,0 +1,65 @@
+react-dom_client.js?v=d8d10e4e:14338 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+content-script.js:22 Document already loaded, running initialization immediately
+content-script.js:4 Attempting to initialize AdUnit
+content-script.js:6 AdUnit initialized successfully
+html2canvas.js?v=d8d10e4e:1516 Uncaught (in promise) Error: Attempting to parse an unsupported color function "oklch"
+    at Object.parse (html2canvas.js?v=d8d10e4e:1516:54)
+    at parse (html2canvas.js?v=d8d10e4e:3258:36)
+    at new CSSParsedDeclaration (html2canvas.js?v=d8d10e4e:3146:27)
+    at new ElementContainer (html2canvas.js?v=d8d10e4e:3292:19)
+    at createContainer (html2canvas.js?v=d8d10e4e:4056:11)
+    at parseNodeTree (html2canvas.js?v=d8d10e4e:4033:22)
+    at parseNodeTree (html2canvas.js?v=d8d10e4e:4041:106)
+    at parseTree (html2canvas.js?v=d8d10e4e:4061:4)
+    at html2canvas.js?v=d8d10e4e:6684:15
+    at step (html2canvas.js?v=d8d10e4e:150:16)
+html2canvas.js?v=d8d10e4e:1516 Uncaught (in promise) Error: Attempting to parse an unsupported color function "oklch"
+    at Object.parse (html2canvas.js?v=d8d10e4e:1516:54)
+    at parse (html2canvas.js?v=d8d10e4e:3258:36)
+    at new CSSParsedDeclaration (html2canvas.js?v=d8d10e4e:3146:27)
+    at new ElementContainer (html2canvas.js?v=d8d10e4e:3292:19)
+    at createContainer (html2canvas.js?v=d8d10e4e:4056:11)
+    at parseNodeTree (html2canvas.js?v=d8d10e4e:4033:22)
+    at parseNodeTree (html2canvas.js?v=d8d10e4e:4041:106)
+    at parseTree (html2canvas.js?v=d8d10e4e:4061:4)
+    at html2canvas.js?v=d8d10e4e:6684:15
+    at step (html2canvas.js?v=d8d10e4e:150:16)
+html2canvas.js?v=d8d10e4e:1516 Uncaught (in promise) Error: Attempting to parse an unsupported color function "oklch"
+    at Object.parse (html2canvas.js?v=d8d10e4e:1516:54)
+    at parse (html2canvas.js?v=d8d10e4e:3258:36)
+    at new CSSParsedDeclaration (html2canvas.js?v=d8d10e4e:3146:27)
+    at new ElementContainer (html2canvas.js?v=d8d10e4e:3292:19)
+    at createContainer (html2canvas.js?v=d8d10e4e:4056:11)
+    at parseNodeTree (html2canvas.js?v=d8d10e4e:4033:22)
+    at parseNodeTree (html2canvas.js?v=d8d10e4e:4041:106)
+    at parseTree (html2canvas.js?v=d8d10e4e:4061:4)
+    at html2canvas.js?v=d8d10e4e:6684:15
+    at step (html2canvas.js?v=d8d10e4e:150:16)
+html2canvas.js?v=d8d10e4e:1516 Uncaught (in promise) Error: Attempting to parse an unsupported color function "oklch"
+    at Object.parse (html2canvas.js?v=d8d10e4e:1516:54)
+    at parse (html2canvas.js?v=d8d10e4e:3258:36)
+    at new CSSParsedDeclaration (html2canvas.js?v=d8d10e4e:3146:27)
+    at new ElementContainer (html2canvas.js?v=d8d10e4e:3292:19)
+    at createContainer (html2canvas.js?v=d8d10e4e:4056:11)
+    at parseNodeTree (html2canvas.js?v=d8d10e4e:4033:22)
+    at parseNodeTree (html2canvas.js?v=d8d10e4e:4041:106)
+    at parseTree (html2canvas.js?v=d8d10e4e:4061:4)
+    at html2canvas.js?v=d8d10e4e:6684:15
+    at step (html2canvas.js?v=d8d10e4e:150:16)
+SortableTeam.tsx:46 Uncaught TypeError: Cannot read properties of undefined (reading 'imageUrl')
+    at SortableTeam (SortableTeam.tsx:46:24)
+    at Object.react_stack_bottom_frame (react-dom_client.js?v=d8d10e4e:12868:12)
+    at renderWithHooks (react-dom_client.js?v=d8d10e4e:4213:19)
+    at updateFunctionComponent (react-dom_client.js?v=d8d10e4e:5569:16)
+    at beginWork (react-dom_client.js?v=d8d10e4e:6140:20)
+    at runWithFiberInDEV (react-dom_client.js?v=d8d10e4e:851:66)
+    at performUnitOfWork (react-dom_client.js?v=d8d10e4e:8429:92)
+    at workLoopSync (react-dom_client.js?v=d8d10e4e:8325:37)
+    at renderRootSync (react-dom_client.js?v=d8d10e4e:8309:6)
+    at performWorkOnRoot (react-dom_client.js?v=d8d10e4e:7994:27)
+react-dom_client.js?v=d8d10e4e:5258 An error occurred in the <SortableTeam> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries.
+
+defaultOnUncaughtError @ react-dom_client.js?v=d8d10e4e:5258

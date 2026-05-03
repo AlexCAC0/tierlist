@@ -1,0 +1,163 @@
+import type { GroupData } from "../types/index";
+
+export const COUNTRY_MAP: { [key: string]: string } = {
+  Ale: "Alemania",
+  Arge: "Argelia",
+  Arg: "Argentina",
+  Ara: "Arabia Saudí",
+  Austra: "Australia",
+  Austri: "Austria",
+  Bel: "Bélgica",
+  Bra: "Brasil",
+  Cab: "Cabo Verde",
+  Can: "Canadá",
+  Cat: "Catar",
+  Cdm: "Costa de Marfil",
+  Cheq: "Chequia",
+  Col: "Colombia",
+  Corea: "Corea del Sur",
+  Cro: "Croacia",
+  Cura: "Curazao",
+  Ecu: "Ecuador",
+  Egi: "Egipto",
+  Esc: "Escocia",
+  Esp: "España",
+  Fran: "Francia",
+  Gha: "Ghana",
+  Hai: "Haití",
+  Ing: "Inglaterra",
+  Jap: "Japón",
+  Mar: "Marruecos",
+  Mex: "México",
+  Nor: "Noruega",
+  Nzl: "Nueva Zelanda",
+  Paisb: "Países Bajos",
+  Pan: "Panamá",
+  Par: "Paraguay",
+  Port: "Portugal",
+  Rdc: "RD Congo",
+  Sen: "Senegal",
+  Suda: "Sudáfrica",
+  Sue: "Suecia",
+  Sui: "Suiza",
+  Turq: "Turquía",
+  Uru: "Uruguay",
+  Usa: "Estados Unidos",
+  Bos: "Bosnia y Herzegovina",
+  Tun: "Túnez",
+  Ira: "Irán",
+  Irak: "Irak",
+  Jor: "Jordania",
+  Uzb: "Uzbekistán",
+};
+
+export const GROUPS: GroupData[] = [
+  {
+    name: "Grupo A",
+    teams: [
+      { name: "México", imageUrl: "/Assets/Camisetas/A/Mexico.png" },
+      { name: "Sudáfrica", imageUrl: "/Assets/Camisetas/A/Sudafrica.png" },
+      { name: "Corea del Sur", imageUrl: "/Assets/Camisetas/A/Korea del sur.png" },
+      { name: "Chequia", imageUrl: "/Assets/Camisetas/A/Chequia.png" },
+    ],
+  },
+  {
+    name: "Grupo B",
+    teams: [
+      { name: "Canadá", imageUrl: "/Assets/Camisetas/B/Canada.png" },
+      { name: "Bosnia y Herzegovina", imageUrl: "/Assets/Camisetas/B/bosnia NA.txt" },
+      { name: "Catar", imageUrl: "/Assets/Camisetas/B/Catar.png" },
+      { name: "Suiza", imageUrl: "/Assets/Camisetas/B/Suiza.png" },
+    ],
+  },
+  {
+    name: "Grupo C",
+    teams: [
+      { name: "Brasil", imageUrl: "/Assets/Camisetas/C/Brasil.png" },
+      { name: "Marruecos", imageUrl: "/Assets/Camisetas/C/Marruecos.png" },
+      { name: "Haití", imageUrl: "/Assets/Camisetas/C/Haití.png" },
+      { name: "Escocia", imageUrl: "/Assets/Camisetas/C/Escocia.png" },
+    ],
+  },
+  {
+    name: "Grupo D",
+    teams: [
+      { name: "Estados Unidos", imageUrl: "/Assets/Camisetas/D/Estados unidos.png" },
+      { name: "Paraguay", imageUrl: "/Assets/Camisetas/D/Paraguay.png" },
+      { name: "Australia", imageUrl: "/Assets/Camisetas/D/Australia.png" },
+      { name: "Turquía", imageUrl: "/Assets/Camisetas/D/Turkia.png" },
+    ],
+  },
+  {
+    name: "Grupo E",
+    teams: [
+      { name: "Alemania", imageUrl: "/Assets/Camisetas/E/Alemania.png" },
+      { name: "Curazao", imageUrl: "/Assets/Camisetas/E/Curazao.png" },
+      { name: "Costa de Marfil", imageUrl: "/Assets/Camisetas/E/Costa de marfil.png" },
+      { name: "Ecuador", imageUrl: "/Assets/Camisetas/E/Ecuador.png" },
+    ],
+  },
+  {
+    name: "Grupo F",
+    teams: [
+      { name: "Países Bajos", imageUrl: "/Assets/Camisetas/F/Paises Bajos.png" },
+      { name: "Japón", imageUrl: "/Assets/Camisetas/F/Japon.png" },
+      { name: "Suecia", imageUrl: "/Assets/Camisetas/F/Suecia.png" },
+      { name: "Túnez", imageUrl: "/Assets/Camisetas/F/Tunez NA.txt" },
+    ],
+  },
+  {
+    name: "Grupo G",
+    teams: [
+      { name: "Bélgica", imageUrl: "/Assets/Camisetas/G/Belgica.png" },
+      { name: "Egipto", imageUrl: "/Assets/Camisetas/G/Egipto.png" },
+      { name: "Irán", imageUrl: "/Assets/Camisetas/G/Iran NA.txt" },
+      { name: "Nueva Zelanda", imageUrl: "/Assets/Camisetas/G/Nueva Zelanda.png" },
+    ],
+  },
+  {
+    name: "Grupo H",
+    teams: [
+      { name: "España", imageUrl: "/Assets/Camisetas/H/España.png" },
+      { name: "Cabo Verde", imageUrl: "/Assets/Camisetas/H/Cabo Verde.png" },
+      { name: "Arabia Saudí", imageUrl: "/Assets/Camisetas/H/Arabia Saudi.png" },
+      { name: "Uruguay", imageUrl: "/Assets/Camisetas/H/Uruguay.png" },
+    ],
+  },
+  {
+    name: "Grupo I",
+    teams: [
+      { name: "Francia", imageUrl: "/Assets/Camisetas/I/Francia.png" },
+      { name: "Senegal", imageUrl: "/Assets/Camisetas/I/Senegal.png" },
+      { name: "Irak", imageUrl: "/Assets/Camisetas/I/Irak NA.txt" },
+      { name: "Noruega", imageUrl: "/Assets/Camisetas/I/Noruega.png" },
+    ],
+  },
+  {
+    name: "Grupo J",
+    teams: [
+      { name: "Argentina", imageUrl: "/Assets/Camisetas/J/Argentina.png" },
+      { name: "Argelia", imageUrl: "/Assets/Camisetas/J/Argelia.png" },
+      { name: "Austria", imageUrl: "/Assets/Camisetas/J/Austria.png" },
+      { name: "Jordania", imageUrl: "/Assets/Camisetas/J/Jordania NA.txt" },
+    ],
+  },
+  {
+    name: "Grupo K",
+    teams: [
+      { name: "Portugal", imageUrl: "/Assets/Camisetas/K/Portugal.png" },
+      { name: "RD Congo", imageUrl: "/Assets/Camisetas/K/RD Congo.png" },
+      { name: "Uzbekistán", imageUrl: "/Assets/Camisetas/K/Uzbekistan NA.txt" },
+      { name: "Colombia", imageUrl: "/Assets/Camisetas/K/Colombia.png" },
+    ],
+  },
+  {
+    name: "Grupo L",
+    teams: [
+      { name: "Inglaterra", imageUrl: "/Assets/Camisetas/L/Inglaterra.png" },
+      { name: "Croacia", imageUrl: "/Assets/Camisetas/L/Croacia.png" },
+      { name: "Ghana", imageUrl: "/Assets/Camisetas/L/Ghana.png" },
+      { name: "Panamá", imageUrl: "/Assets/Camisetas/L/Panamá.png" },
+    ],
+  },
+];

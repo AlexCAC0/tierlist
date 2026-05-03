@@ -1,0 +1,71 @@
+G-A
+mexico
+sudáfrica
+corea del sur
+chequia
+
+G-B
+canadá
+bosnia y herzegovina
+catar
+suiza
+
+G-C
+brasil
+marruecos
+haití
+escocia
+
+G-D
+estados unidos
+paraguay
+australia
+turquía
+
+G-E
+alemania
+curazao
+costa de marfil
+ecuador
+
+G-F
+países bajos
+japon
+suecia
+túnez
+
+G-G
+bélgica
+egipto
+irán
+nueva zelanda
+
+G-H
+españa
+cabo verde
+arabia saudí
+uruguay
+
+G-I
+francia
+senegal
+irak
+noruega
+
+G-J
+argentina
+argelia
+austria
+jordania
+
+G-K
+portugal
+rd congo
+uzbekistán
+colombia
+
+G-L
+inglaterra
+croacia
+ghana
+panamá
