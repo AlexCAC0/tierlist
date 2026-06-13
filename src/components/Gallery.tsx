@@ -203,7 +203,6 @@ const Gallery = () => {
                 {(['Home', 'Away', 'Third'] as const).map((type) => {
                   const individual = getIndividualJersey(type);
                   const isActive = viewType === type;
-                  const buttonColor = type === 'Home' ? 'wc-red' : type === 'Away' ? 'wc-blue' : 'wc-gold';
                   const activeColorClass = 
                     type === 'Home' ? 'border-wc-red bg-wc-red/15 text-white shadow-[0_0_15px_rgba(255,26,77,0.25)]' :
                     type === 'Away' ? 'border-wc-blue bg-wc-blue/15 text-white shadow-[0_0_15px_rgba(26,140,255,0.25)]' :
