@@ -44,11 +44,16 @@ export const COUNTRY_MAP: { [key: string]: string } = {
   Uru: "Uruguay",
   Usa: "Estados Unidos",
   Bos: "Bosnia y Herzegovina",
+  Bosnia: "Bosnia y Herzegovina",
   Tun: "Túnez",
+  Tunez: "Túnez",
   Ira: "Irán",
+  Iran: "Irán",
   Irak: "Irak",
+  Jordania: "Jordania",
   Jor: "Jordania",
   Uzb: "Uzbekistán",
+  Uzbekistan: "Uzbekistán",
 };
 
 export const GROUPS: GroupData[] = [
@@ -65,7 +70,7 @@ export const GROUPS: GroupData[] = [
     name: "Grupo B",
     teams: [
       { name: "Canadá", imageUrl: "/Assets/Camisetas/B/Canada.png" },
-      { name: "Bosnia y Herzegovina", imageUrl: "/Assets/Camisetas/B/bosnia NA.txt" },
+      { name: "Bosnia y Herzegovina", imageUrl: "/Assets/Camisetas/B/Bosnia.png" },
       { name: "Catar", imageUrl: "/Assets/Camisetas/B/Catar.png" },
       { name: "Suiza", imageUrl: "/Assets/Camisetas/B/Suiza.png" },
     ],
@@ -103,7 +108,7 @@ export const GROUPS: GroupData[] = [
       { name: "Países Bajos", imageUrl: "/Assets/Camisetas/F/Paises Bajos.png" },
       { name: "Japón", imageUrl: "/Assets/Camisetas/F/Japon.png" },
       { name: "Suecia", imageUrl: "/Assets/Camisetas/F/Suecia.png" },
-      { name: "Túnez", imageUrl: "/Assets/Camisetas/F/Tunez NA.txt" },
+      { name: "Túnez", imageUrl: "/Assets/Camisetas/F/Tunez.png" },
     ],
   },
   {
@@ -111,7 +116,7 @@ export const GROUPS: GroupData[] = [
     teams: [
       { name: "Bélgica", imageUrl: "/Assets/Camisetas/G/Belgica.png" },
       { name: "Egipto", imageUrl: "/Assets/Camisetas/G/Egipto.png" },
-      { name: "Irán", imageUrl: "/Assets/Camisetas/G/Iran NA.txt" },
+      { name: "Irán", imageUrl: "/Assets/Camisetas/G/Iran.png" },
       { name: "Nueva Zelanda", imageUrl: "/Assets/Camisetas/G/Nueva Zelanda.png" },
     ],
   },
@@ -129,7 +134,7 @@ export const GROUPS: GroupData[] = [
     teams: [
       { name: "Francia", imageUrl: "/Assets/Camisetas/I/Francia.png" },
       { name: "Senegal", imageUrl: "/Assets/Camisetas/I/Senegal.png" },
-      { name: "Irak", imageUrl: "/Assets/Camisetas/I/Irak NA.txt" },
+      { name: "Irak", imageUrl: "/Assets/Camisetas/I/Irak.png" },
       { name: "Noruega", imageUrl: "/Assets/Camisetas/I/Noruega.png" },
     ],
   },
@@ -139,7 +144,7 @@ export const GROUPS: GroupData[] = [
       { name: "Argentina", imageUrl: "/Assets/Camisetas/J/Argentina.png" },
       { name: "Argelia", imageUrl: "/Assets/Camisetas/J/Argelia.png" },
       { name: "Austria", imageUrl: "/Assets/Camisetas/J/Austria.png" },
-      { name: "Jordania", imageUrl: "/Assets/Camisetas/J/Jordania NA.txt" },
+      { name: "Jordania", imageUrl: "/Assets/Camisetas/J/Jordania.png" },
     ],
   },
   {
@@ -147,7 +152,7 @@ export const GROUPS: GroupData[] = [
     teams: [
       { name: "Portugal", imageUrl: "/Assets/Camisetas/K/Portugal.png" },
       { name: "RD Congo", imageUrl: "/Assets/Camisetas/K/RD Congo.png" },
-      { name: "Uzbekistán", imageUrl: "/Assets/Camisetas/K/Uzbekistan NA.txt" },
+      { name: "Uzbekistán", imageUrl: "/Assets/Camisetas/K/Uzbekistan.png" },
       { name: "Colombia", imageUrl: "/Assets/Camisetas/K/Colombia.png" },
     ],
   },

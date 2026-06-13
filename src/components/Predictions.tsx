@@ -58,16 +58,18 @@ const Predictions = () => {
 
   if (showBracket) {
     return (
-      <div className="space-y-8 animate-in fade-in zoom-in-95 duration-500">
-        <div className="flex items-center justify-between bg-white/5 p-6 rounded-2xl border border-white/10">
+      <div className="space-y-8 animate-in fade-in zoom-in-95 duration-500 font-wc-font">
+        <div className="glass-panel p-6 rounded-2xl border border-white/10 flex items-center justify-between">
           <button 
             onClick={() => setShowBracket(false)}
-            className="flex items-center space-x-2 text-wc-blue font-black uppercase text-xs tracking-widest hover:text-white transition-colors"
+            className="flex items-center space-x-2 text-wc-blue font-wc-title font-bold uppercase text-xs tracking-wider hover:text-white transition-colors cursor-pointer group"
           >
-            <ArrowLeft size={20} />
+            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
             <span>Volver a Grupos</span>
           </button>
-          <h2 className="text-2xl font-black uppercase text-white italic tracking-tighter">Eliminatorias <span className="text-wc-blue">2026</span></h2>
+          <h2 className="text-xl md:text-2xl font-wc-title font-black uppercase text-white italic tracking-tighter select-none">
+            Eliminatorias <span className="text-wc-blue drop-shadow-[0_0_10px_rgba(26,140,255,0.4)]">2026</span>
+          </h2>
         </div>
         
         <KnockoutBracket 
@@ -80,39 +82,43 @@ const Predictions = () => {
   }
 
   return (
-    <div className="space-y-20 animate-in fade-in duration-700">
+    <div className="space-y-16 md:space-y-24 animate-in fade-in duration-700 font-wc-font">
       {/* Simulation Header */}
-      <div className="bg-white/5 p-10 rounded-[3rem] border border-white/10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 relative overflow-hidden">
-         <div className="relative z-10 space-y-2">
-            <div className="inline-flex items-center space-x-2 bg-wc-green text-white px-4 py-1 rounded-full font-black uppercase text-[10px] tracking-widest">
+      <div className="glass-panel p-8 md:p-10 rounded-[2.5rem] border border-white/10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 relative overflow-hidden">
+         <div className="absolute inset-0 bg-gradient-to-r from-wc-green/5 via-transparent to-wc-blue/5 opacity-30"></div>
+         <div className="relative z-10 space-y-3">
+            <div className="inline-flex items-center space-x-2 bg-wc-green/10 border border-wc-green/30 text-wc-green px-4 py-1 rounded-full font-wc-title font-bold uppercase text-[9px] tracking-wider">
+               <span className="w-1.5 h-1.5 rounded-full bg-wc-green animate-ping"></span>
                <span>Tournament Engine</span>
             </div>
-            <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none">
-               The <span className="text-wc-green text-outline-green">Simulator</span>
+            <h2 className="text-5xl md:text-7xl font-wc-title font-black uppercase tracking-tighter italic leading-none select-none">
+               The <span className="text-wc-green drop-shadow-[0_4px_10px_rgba(16,185,129,0.3)]">Simulator</span>
             </h2>
-            <p className="text-white/40 font-medium">Define el destino de las 48 naciones.</p>
+            <p className="text-white/40 font-semibold uppercase tracking-wider text-[10px]">Define el destino de las 48 naciones</p>
          </div>
          <button 
             onClick={resetPredictions}
-            className="relative z-10 flex items-center justify-center space-x-3 bg-white text-black px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-wc-green hover:text-white transition-all shadow-2xl"
+            className="relative z-10 flex items-center justify-center space-x-3 bg-white text-black px-8 py-4 rounded-xl font-wc-title font-bold uppercase tracking-wider text-xs hover:bg-wc-red hover:text-white transition-all duration-300 shadow-xl skew-x-[-8deg] cursor-pointer"
           >
-            <RefreshCw size={20} />
-            <span>Resetear Todo</span>
+            <div className="transform skew-x-[8deg] flex items-center gap-2">
+              <RefreshCw size={14} />
+              <span>Resetear Todo</span>
+            </div>
           </button>
       </div>
 
       {/* Step 1: Groups */}
-      <div className="space-y-10">
-        <div className="flex items-center space-x-6">
-           <div className="w-16 h-16 rounded-2xl bg-wc-green text-white flex items-center justify-center font-black text-3xl italic shadow-[0_0_30px_rgba(60,172,59,0.3)]">1</div>
-           <div className="space-y-1">
-              <h3 className="text-3xl font-black uppercase italic tracking-tighter text-white">Fase de Grupos</h3>
-              <p className="text-white/30 font-bold uppercase text-[10px] tracking-[0.2em]">Clasifican 1° y 2° de cada sector</p>
+      <div className="space-y-8">
+        <div className="flex items-center space-x-5 select-none">
+           <div className="w-12 h-12 rounded-xl bg-wc-green text-white flex items-center justify-center font-wc-title font-black text-xl italic shadow-[0_0_20px_rgba(16,185,129,0.4)] border border-white/10">1</div>
+           <div className="space-y-0.5">
+              <h3 className="text-xl md:text-2xl font-wc-title font-black uppercase italic tracking-tighter text-white">Fase de Grupos</h3>
+              <p className="text-white/30 font-bold uppercase text-[9px] tracking-widest">Clasifican 1° y 2° de cada sector</p>
            </div>
            <div className="h-px flex-1 bg-gradient-to-r from-wc-green/30 to-transparent"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {GROUPS.map((group) => (
             <GroupPredictor 
               key={group.name} 
@@ -125,17 +131,17 @@ const Predictions = () => {
       </div>
 
       {/* Step 2: Third Places */}
-      <div className="space-y-10">
-        <div className="flex items-center space-x-6">
-           <div className="w-16 h-16 rounded-2xl bg-yellow-500 text-white flex items-center justify-center font-black text-3xl italic shadow-[0_0_30px_rgba(234,179,8,0.3)]">2</div>
-           <div className="space-y-1">
-              <h3 className="text-3xl font-black uppercase italic tracking-tighter text-white">Mejores Terceros</h3>
-              <p className="text-white/30 font-bold uppercase text-[10px] tracking-[0.2em]">Selecciona los 8 que avanzan ({thirdPlaceSelected.length}/8)</p>
+      <div className="space-y-8">
+        <div className="flex items-center space-x-5 select-none">
+           <div className="w-12 h-12 rounded-xl bg-wc-gold text-black flex items-center justify-center font-wc-title font-black text-xl italic shadow-[0_0_20px_rgba(212,175,55,0.4)] border border-white/10">2</div>
+           <div className="space-y-0.5">
+              <h3 className="text-xl md:text-2xl font-wc-title font-black uppercase italic tracking-tighter text-white">Mejores Terceros</h3>
+              <p className="text-white/30 font-bold uppercase text-[9px] tracking-widest">Selecciona los 8 que avanzan ({thirdPlaceSelected.length}/8)</p>
            </div>
-           <div className="h-px flex-1 bg-gradient-to-r from-yellow-500/30 to-transparent"></div>
+           <div className="h-px flex-1 bg-gradient-to-r from-wc-gold/30 to-transparent"></div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {GROUPS.map((group) => {
             const teamName = getThirdPlaceTeam(group.name);
             const isSelected = thirdPlaceSelected.includes(group.name);
@@ -147,23 +153,26 @@ const Predictions = () => {
                 onClick={() => toggleThirdPlace(group.name)}
                 disabled={isDisabled}
                 className={`
-                  p-6 rounded-3xl border-2 transition-all text-left flex flex-col items-center group relative overflow-hidden
+                  p-5 rounded-2xl border transition-all duration-300 text-left flex flex-col items-center group relative overflow-hidden cursor-pointer
                   ${isSelected 
-                    ? 'border-yellow-500 bg-yellow-500/10 shadow-[0_0_40px_rgba(234,179,8,0.2)] scale-105 z-10' 
+                    ? 'border-wc-gold bg-wc-gold/10 shadow-[0_0_20px_rgba(212,175,55,0.15)] scale-102 z-10' 
                     : 'border-white/5 bg-white/5 hover:border-white/20'
                   }
                   ${isDisabled ? 'opacity-20 cursor-not-allowed grayscale' : ''}
                 `}
               >
-                <span className="text-[10px] font-black uppercase text-white/20 mb-3 tracking-widest">{group.name}</span>
-                <span className="text-sm font-black text-center leading-tight mb-4 h-10 flex items-center text-white">{teamName}</span>
+                <span className="text-[9px] font-wc-title font-bold uppercase text-white/20 mb-2 tracking-widest select-none">{group.name}</span>
+                <span className="text-xs font-wc-title font-bold text-center leading-snug mb-3.5 h-10 flex items-center text-white select-none">{teamName}</span>
                 
                 <div className={`
-                  w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all duration-500
-                  ${isSelected ? 'bg-yellow-500 border-yellow-500 rotate-[360deg]' : 'border-white/10 group-hover:border-white/30'}
+                  w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-500 select-none
+                  ${isSelected 
+                    ? 'bg-wc-gold border-wc-gold rotate-[360deg] shadow-[0_0_10px_rgba(212,175,55,0.5)]' 
+                    : 'border-white/10 group-hover:border-white/30'
+                  }
                 `}>
                   {isSelected && (
-                    <svg className="w-5 h-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={5} d="M5 13l4 4L19 7" />
                     </svg>
                   )}
@@ -176,21 +185,21 @@ const Predictions = () => {
 
       {/* Action Zone */}
       <div className={`
-        p-16 rounded-[4rem] border-4 border-dashed text-center transition-all duration-700 relative overflow-hidden
+        p-12 md:p-16 rounded-[2.5rem] border-2 border-dashed text-center transition-all duration-500 relative overflow-hidden
         ${thirdPlaceSelected.length === 8 
-          ? 'bg-wc-blue border-wc-blue shadow-[0_0_80px_rgba(42,57,141,0.4)]' 
-          : 'bg-white/5 border-white/10 opacity-50'}
+          ? 'bg-gradient-to-r from-wc-blue/20 to-wc-blue/5 border-wc-blue/50 shadow-[0_15px_50px_rgba(26,140,255,0.15)]' 
+          : 'bg-white/[0.01] border-white/10 opacity-60'}
       `}>
-        {/* Massive Background Mascot */}
-        <div className="absolute right-[-5%] bottom-[-10%] opacity-10 pointer-events-none">
-           <img src="/Assets/Fifa World Cup 2026/Mascotas/Zayu.png" alt="" className="h-[400px] object-contain rotate-[-15deg]" />
+        {/* Mascot background silhouette */}
+        <div className="absolute right-[-4%] bottom-[-12%] opacity-[0.035] pointer-events-none select-none">
+           <img src="/Assets/Fifa World Cup 2026/Mascotas/Zayu.png" alt="" className="h-[280px] md:h-[350px] object-contain rotate-[-12deg]" />
         </div>
 
-        <div className="relative z-10 space-y-8">
-           <h3 className={`text-4xl md:text-7xl font-black uppercase italic tracking-tighter leading-none ${thirdPlaceSelected.length === 8 ? 'text-white' : 'text-white/20'}`}>
-              Road to the <span className={thirdPlaceSelected.length === 8 ? 'text-white' : 'text-white/10'}>Final</span>
+        <div className="relative z-10 space-y-6 md:space-y-8">
+           <h3 className={`text-3xl md:text-5xl font-wc-title font-black uppercase italic tracking-tighter leading-none ${thirdPlaceSelected.length === 8 ? 'text-white' : 'text-white/20'}`}>
+              Road to the <span className={thirdPlaceSelected.length === 8 ? 'text-wc-blue drop-shadow-[0_0_10px_rgba(26,140,255,0.4)]' : 'text-white/10'}>Final</span>
            </h3>
-           <p className={`max-w-xl mx-auto text-lg font-medium leading-relaxed ${thirdPlaceSelected.length === 8 ? 'text-white/80' : 'text-white/20'}`}>
+           <p className={`max-w-md mx-auto text-xs sm:text-sm font-semibold uppercase tracking-wider leading-relaxed ${thirdPlaceSelected.length === 8 ? 'text-white/75' : 'text-white/25'}`}>
               {thirdPlaceSelected.length === 8 
                 ? '¡Estrategia completada! El cuadro de 32 equipos está listo para ser disputado.'
                 : 'Debes elegir exactamente a los 8 mejores terceros para desbloquear el cuadro de eliminación directa.'}
@@ -199,9 +208,11 @@ const Predictions = () => {
            {thirdPlaceSelected.length === 8 && (
              <button 
                onClick={() => setShowBracket(true)}
-               className="px-16 py-6 bg-white text-wc-blue rounded-2xl font-black uppercase tracking-[0.2em] hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(0,0,0,0.3)] text-xl italic"
+               className="px-12 py-5 bg-white text-wc-blue rounded-xl font-wc-title font-black uppercase tracking-widest hover:scale-105 active:scale-95 transition-all duration-300 shadow-[0_15px_30px_rgba(0,0,0,0.4)] text-base italic cursor-pointer skew-x-[-8deg] hover:bg-wc-blue hover:text-white hover:shadow-[0_0_20px_rgba(26,140,255,0.4)]"
              >
-               Generar Eliminatorias
+               <div className="transform skew-x-[8deg]">
+                 Generar Eliminatorias
+               </div>
              </button>
            )}
         </div>

@@ -29,11 +29,11 @@ interface RankConfig {
 }
 
 const RANKS: RankConfig[] = [
-  { name: 'Hermosa', color: 'bg-[#E61D25]', desc: 'Elite Style' },
-  { name: 'Locura', color: 'bg-[#FF4D00]', desc: 'Top Tier' },
-  { name: 'Ta bien', color: 'bg-[#FFB800]', desc: 'Decent' },
-  { name: 'Meh', color: 'bg-[#3CAC3B]', desc: 'Average' },
-  { name: 'Horrible', color: 'bg-[#2A398D]', desc: 'Disaster' },
+  { name: 'Hermosa', color: 'from-[#FF1A4D]/80 to-[#FF1A4D]/40 border-l-[#FF1A4D]', desc: 'Elite Style' },
+  { name: 'Locura', color: 'from-[#FF6B00]/80 to-[#FF6B00]/40 border-l-[#FF6B00]', desc: 'Top Tier' },
+  { name: 'Ta bien', color: 'from-[#FFB800]/80 to-[#FFB800]/40 border-l-[#FFB800]', desc: 'Decent' },
+  { name: 'Meh', color: 'from-[#10B981]/80 to-[#10B981]/40 border-l-[#10B981]', desc: 'Average' },
+  { name: 'Horrible', color: 'from-[#1A8CFF]/80 to-[#1A8CFF]/40 border-l-[#1A8CFF]', desc: 'Disaster' },
 ];
 
 const TierList = () => {
@@ -157,41 +157,50 @@ const TierList = () => {
   const activeJersey = activeId ? INDIVIDUAL_JERSEYS.find(j => j.id === activeId) : null;
 
   return (
-    <div className="space-y-12 pb-24">
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 bg-[#0a0a0a] p-10 rounded-[3rem] border border-white/5 relative overflow-hidden group shadow-2xl">
-        <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none group-hover:scale-110 transition-transform duration-1000">
-           <Trophy size={180} strokeWidth={1} />
+    <div className="space-y-12 pb-24 font-wc-font">
+      {/* Header Panel */}
+      <div className="glass-panel p-8 md:p-10 rounded-[2.5rem] relative overflow-hidden group shadow-2xl border border-white/10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+        {/* Background Ambient Glow */}
+        <div className="absolute inset-0 bg-gradient-to-r from-wc-red/5 via-transparent to-wc-blue/5 opacity-40"></div>
+        <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none group-hover:scale-110 group-hover:opacity-[0.07] transition-all duration-1000 select-none">
+           <Trophy size={180} strokeWidth={1.5} />
         </div>
         
-        <div className="relative z-10 space-y-4">
-          <div className="flex items-center space-x-4 text-wc-red font-black uppercase text-[10px] tracking-[0.4em]">
-            <div className="w-8 h-[2px] bg-wc-red"></div>
+        <div className="relative z-10 space-y-3">
+          <div className="flex items-center space-x-3 text-wc-red font-wc-title font-bold uppercase text-[10px] tracking-[0.25em]">
+            <div className="w-6 h-[2px] bg-wc-red shadow-[0_0_8px_rgba(255,26,77,0.8)]"></div>
             <span>Kit Authority System</span>
           </div>
-          <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none drop-shadow-2xl">
-            Jersey <span className="text-wc-red skew-x-[-10deg] inline-block">Rankings</span>
+          <h2 className="text-5xl md:text-7xl font-wc-title font-black uppercase tracking-tighter italic leading-none select-none">
+            Jersey <span className="text-wc-red skew-x-[-8deg] inline-block drop-shadow-[0_4px_10px_rgba(255,26,77,0.3)]">Rankings</span>
           </h2>
-          <p className="text-white/20 font-bold uppercase tracking-[0.3em] text-[10px]">Define the style of the North American Era</p>
+          <p className="text-white/40 font-semibold uppercase tracking-[0.2em] text-[10px]">Define the style of the North American Era</p>
         </div>
         
         <div className="relative z-10 flex flex-wrap gap-4">
           <button 
             onClick={resetTierList}
-            className="flex-1 sm:flex-none flex items-center justify-center space-x-3 bg-white/5 border border-white/10 px-8 py-4 rounded-2xl hover:bg-wc-red hover:text-white transition-all font-black uppercase text-[10px] tracking-widest text-white/40"
+            className="flex-1 sm:flex-none flex items-center justify-center space-x-3 bg-white/5 border border-white/10 px-8 py-4 rounded-xl hover:bg-wc-red/20 hover:border-wc-red hover:text-wc-red transition-all duration-300 font-wc-title font-bold uppercase text-[10px] tracking-widest cursor-pointer skew-x-[-8deg]"
           >
-            <RefreshCw size={18} />
-            <span>Reset List</span>
+            <div className="transform skew-x-[8deg] flex items-center gap-2">
+              <RefreshCw size={14} />
+              <span>Reset List</span>
+            </div>
           </button>
+          
           <button 
             onClick={toggleFullscreen}
-            className="flex-1 sm:flex-none flex items-center justify-center space-x-3 bg-white text-black px-10 py-5 rounded-2xl hover:bg-wc-blue hover:text-white transition-all font-black uppercase text-xs tracking-[0.2em] shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform hover:-translate-y-1 skew-x-[-10deg]"
+            className="flex-1 sm:flex-none flex items-center justify-center space-x-3 bg-white text-black px-10 py-4.5 rounded-xl hover:bg-wc-blue hover:text-white hover:shadow-[0_0_25px_rgba(26,140,255,0.4)] transition-all duration-300 font-wc-title font-bold uppercase text-xs tracking-[0.15em] shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform hover:-translate-y-0.5 skew-x-[-8deg] cursor-pointer"
           >
-            <Maximize2 size={20} />
-            <span>Modo Captura</span>
+            <div className="transform skew-x-[8deg] flex items-center gap-2">
+              <Maximize2 size={16} />
+              <span>Modo Captura</span>
+            </div>
           </button>
         </div>
       </div>
 
+      {/* Main Dnd Context */}
       <DndContext
         sensors={sensors}
         collisionDetection={rectIntersection}
@@ -200,15 +209,17 @@ const TierList = () => {
         onDragEnd={handleDragEnd}
       >
         <div className="relative group">
-          <div className="absolute -inset-4 bg-gradient-to-r from-wc-red/5 via-wc-blue/5 to-wc-green/5 opacity-50 blur-[100px] rounded-[4rem]"></div>
+          {/* Subtle Ambient Red/Blue/Green Glow under the Tier List */}
+          <div className="absolute -inset-6 bg-gradient-to-r from-wc-red/5 via-wc-blue/5 to-wc-green/5 opacity-40 blur-[80px] rounded-[3rem] pointer-events-none"></div>
           
           <div 
             ref={tierListRef} 
-            className="relative bg-[#050505] p-2 sm:p-6 rounded-[3.5rem] shadow-2xl border border-white/5 overflow-hidden"
+            className="relative glass-panel-heavy p-2 sm:p-5 rounded-[2.5rem] shadow-2xl border border-white/10 overflow-hidden"
           >
-             <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%)] z-10 bg-[length:100%_4px]"></div>
+             {/* Scanlines effect for CRT/Stadium Screen vibe */}
+             <div className="absolute inset-0 pointer-events-none opacity-[0.015] bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%)] z-10 bg-[length:100%_4px]"></div>
 
-             <div className="rounded-[2.5rem] overflow-hidden border border-white/5">
+             <div className="rounded-[1.8rem] overflow-hidden border border-white/10 bg-[#080808]">
               {RANKS.map((rank) => (
                 <TierRow 
                   key={rank.name} 
@@ -221,35 +232,36 @@ const TierList = () => {
               ))}
              </div>
 
-             <div className="mt-8 flex justify-between items-center px-8 opacity-10">
-                <span className="font-black italic uppercase tracking-widest text-sm">Alex.G Design</span>
-                <span className="font-black italic uppercase tracking-[0.5em] text-[10px]">WE ARE 26</span>
+             <div className="mt-6 flex justify-between items-center px-6 opacity-30 select-none">
+                <span className="font-wc-title font-bold italic uppercase tracking-wider text-[10px]">Alex.G Design</span>
+                <span className="font-wc-title font-bold italic uppercase tracking-[0.4em] text-[9px]">WE ARE 26</span>
              </div>
           </div>
         </div>
 
-        <div className="mt-20 space-y-10">
-          <div className="flex items-center justify-between px-10">
+        {/* Unranked Locker Room */}
+        <div className="mt-16 space-y-8">
+          <div className="flex items-center justify-between px-8">
             <div className="space-y-1">
-               <h3 className="text-2xl font-black uppercase italic tracking-tighter flex items-center space-x-4 text-white">
-                 <span className="bg-wc-red text-white px-3 py-1 rounded-lg skew-x-[-15deg]">48</span>
+               <h3 className="text-xl md:text-2xl font-wc-title font-black uppercase italic tracking-tighter flex items-center space-x-3 text-white select-none">
+                 <span className="bg-wc-red text-white px-2.5 py-0.5 rounded-lg skew-x-[-10deg] shadow-[0_0_15px_rgba(255,26,77,0.2)]">48</span>
                  <span>Equipaciones</span>
                </h3>
-               <p className="text-white/10 font-bold uppercase text-[9px] tracking-[0.4em]">Arrastra las camisetas para clasificarlas</p>
+               <p className="text-white/30 font-bold uppercase text-[9px] tracking-[0.3em]">Arrastra las camisetas para clasificarlas</p>
             </div>
-            <div className="hidden md:block text-white/5 font-black uppercase text-4xl tracking-tighter italic select-none">
-               DRAFT SELECTION
+            <div className="hidden md:block text-white/5 font-wc-title font-black uppercase text-3xl tracking-tighter italic select-none">
+               DRAFT LOCKER ROOM
             </div>
           </div>
           
           <SortableContext items={items.unranked} strategy={horizontalListSortingStrategy}>
-            <div className="flex flex-wrap gap-6 justify-center min-h-[400px] p-12 bg-white/[0.02] rounded-[4rem] border border-white/5 relative overflow-hidden shadow-inner">
-               <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+            <div className="flex flex-wrap gap-4 md:gap-5 justify-center min-h-[350px] p-8 md:p-10 bg-white/[0.01] rounded-[2.5rem] border border-white/5 relative overflow-hidden shadow-inner football-pitch-grid">
+               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 pointer-events-none"></div>
 
               {items.unranked.length === 0 && (
-                <div className="flex flex-col items-center justify-center text-white/5 space-y-6 relative z-10 py-20">
-                   <Share2 size={120} strokeWidth={1} className="animate-pulse" />
-                   <p className="font-black uppercase tracking-[1em] text-xs text-center">Clasificación Completada</p>
+                <div className="flex flex-col items-center justify-center text-white/15 space-y-5 relative z-10 py-16 animate-pulse select-none">
+                   <Share2 size={80} strokeWidth={1} />
+                   <p className="font-wc-title font-black uppercase tracking-[0.6em] text-[10px] text-center">Clasificación Completada</p>
                 </div>
               )}
               {items.unranked.map((id) => (
@@ -259,11 +271,12 @@ const TierList = () => {
           </SortableContext>
         </div>
 
+        {/* Drag Overlay with custom hologram card */}
         <DragOverlay dropAnimation={null}>
           {activeId ? (
-            <div className="w-28 h-40 sm:w-36 sm:h-52 bg-white rounded-[2rem] shadow-[0_60px_100px_rgba(0,0,0,0.9)] border-8 border-wc-red flex items-center justify-center p-4 cursor-grabbing rotate-6 scale-110 transition-transform relative">
-              <div className="absolute -top-4 -right-4 bg-wc-red text-white w-10 h-10 rounded-full flex items-center justify-center font-black animate-bounce shadow-xl">!</div>
-              <img src={activeJersey?.imageUrl} alt={activeJersey?.id} className="w-full h-full object-contain" />
+            <div className="w-24 h-32 sm:w-28 sm:h-38 bg-[#0c0c0c] rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.8)] border-2 border-wc-red flex items-center justify-center p-3 cursor-grabbing rotate-3 scale-105 z-[1000] relative">
+              <div className="absolute -top-3 -right-3 bg-wc-red text-white w-7 h-7 rounded-full flex items-center justify-center font-wc-title font-black text-xs animate-pulse shadow-lg">!</div>
+              <img src={activeJersey?.imageUrl} alt={activeJersey?.id} className="w-full h-full object-contain pointer-events-none" />
             </div>
           ) : null}
         </DragOverlay>

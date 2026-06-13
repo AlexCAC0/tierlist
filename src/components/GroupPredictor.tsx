@@ -46,13 +46,13 @@ const GroupPredictor = ({ group, rankings, onRankChange }: GroupPredictorProps) 
   };
 
   return (
-    <div className="bg-white/5 rounded-2xl shadow-xl overflow-hidden border border-white/10 flex flex-col backdrop-blur-sm group hover:border-wc-blue/30 transition-all duration-500">
-      <div className="bg-black/40 px-5 py-3 flex justify-between items-center border-b border-white/5">
-        <h3 className="text-white font-black uppercase tracking-widest text-xs italic">{group.name}</h3>
-        <div className="w-2 h-2 rounded-full bg-wc-red animate-pulse"></div>
+    <div className="glass-panel rounded-2xl shadow-xl overflow-hidden flex flex-col group hover:border-wc-blue/40 hover:shadow-[0_12px_25px_rgba(26,140,255,0.08)] transition-all duration-500">
+      <div className="bg-black/60 px-5 py-3.5 flex justify-between items-center border-b border-white/5 select-none">
+        <h3 className="text-white font-wc-title font-black uppercase tracking-widest text-xs italic">{group.name}</h3>
+        <div className="w-2 h-2 rounded-full bg-wc-blue animate-pulse shadow-[0_0_8px_rgba(26,140,255,0.8)]"></div>
       </div>
       
-      <div className="p-4 space-y-2 flex-1">
+      <div className="p-4 space-y-2.5 flex-1 bg-white/[0.005]">
         <DndContext 
           sensors={sensors} 
           collisionDetection={closestCorners} 
@@ -71,13 +71,13 @@ const GroupPredictor = ({ group, rankings, onRankChange }: GroupPredictorProps) 
         </DndContext>
       </div>
       
-      <div className="bg-black/20 px-4 py-3 border-t border-white/5 text-[9px] flex justify-between font-black uppercase tracking-tighter opacity-40">
+      <div className="bg-black/40 px-4 py-3 border-t border-white/5 text-[9px] flex justify-between font-wc-title font-bold uppercase tracking-wider opacity-60 select-none">
         <div className="flex items-center space-x-1.5">
-          <div className="w-1.5 h-1.5 rounded-full bg-wc-green"></div>
+          <div className="w-1.5 h-1.5 rounded-full bg-wc-green shadow-[0_0_6px_rgba(16,185,129,0.8)]"></div>
           <span>Qualify</span>
         </div>
         <div className="flex items-center space-x-1.5">
-          <div className="w-1.5 h-1.5 rounded-full bg-wc-red"></div>
+          <div className="w-1.5 h-1.5 rounded-full bg-wc-red shadow-[0_0_6px_rgba(255,26,77,0.8)]"></div>
           <span>Out</span>
         </div>
       </div>
